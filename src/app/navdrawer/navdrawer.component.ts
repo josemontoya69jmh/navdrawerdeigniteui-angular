@@ -32,22 +32,32 @@ export class NavdrawerComponent  {
   public selected = "Avatar";
 
   @ViewChild(IgxNavigationDrawerComponent, { static: true })
+  // La instancia drawer nos devuelve todo lo que podemos hacer con 
+  // position
   public drawer: IgxNavigationDrawerComponent;
 
+
   public drawerState = {
-    
+// Con la miniTemplate controlamos la miniatura de los iconos
     miniTemplate: false,
     // aqui controlamos junto con [isOpen]en el html si aparece abierto o cerrado al iicio
     open: false,
     // 
-    pin: true
+    pin: false
   };
 
-  /** Select item and close drawer if not pinned */
+  /** Funcion espupenda para ver que nos devuelve la instancia drawer y que podemos
+   hacer con ella
+   */
   public navigate(item) {
+  console.log('reciboelitem',item)
     this.selected = item.text;
-    if (!this.drawer.pin) {
-      this.drawer.close();
-    }
+this.drawer.position= 'right';
+
+ this.drawer.close();
+ console.log('drawer instancia', this.drawer.isOpen);
+    // if (!this.drawer.pin) {
+    //   this.drawer.close();
+    // }
   }
 }
