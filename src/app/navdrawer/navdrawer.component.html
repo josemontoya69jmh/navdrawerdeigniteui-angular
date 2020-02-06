@@ -5,7 +5,7 @@
   pin nos hace ver el efecto de arrastre
   pinThreshold   tiene que estar para que funcione el pin
   width   ancho del cajon abierto   el id es para el igxToggleAction de abajo-->
-	<igx-nav-drawer id="navegacion" [isOpen]="false" [position]="'left'" [width]="'200px'" [pin]="false"
+	<igx-nav-drawer id="navegacion" [isOpen]="false" [position]="'left'" [width]="'200px'" [pin]="true"
 		[pinThreshold]="0">
 
 		<!-- En esta template tenemos los iconos -->
@@ -13,10 +13,12 @@
 			<nav>
 				<!-- <span igxDrawerItem [isHeader]="false">Components</span> -->
 
-				<span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
-          <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+				<span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)" >
+          <igx-icon fontSet="material"  *ngIf= "esAdmitido">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
 				</span>
+
+        
 			</nav>
 		</ng-template>
 

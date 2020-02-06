@@ -1,4 +1,12 @@
- 
+ @import '~igniteui-angular/lib/core/styles/themes/index';
+$company-color: #2ab759; /* Some green shade I like */
+$secondary-color: #f96a88; /* Watermelon pink */
+// Don't forget to include the igx-core first
+@include igx-core();
+
+// the default color palette is passed to the global theme
+@include igx-theme($default-palette);
+
  .content-wrap
 {
     width: 100%;

@@ -31,7 +31,7 @@ export class NavdrawerComponent {
   ];
 
   public selected = "";
-
+public esAdmitido = true;
   @ViewChild(IgxNavigationDrawerComponent, { static: true })
   // La instancia drawer nos devuelve todo lo que podemos hacer con
   // position
