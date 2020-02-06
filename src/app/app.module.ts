@@ -1,8 +1,10 @@
+// Importantes que esten
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
+// Estas son las minimas importaciones de igx pero las de arriba tambien son importantes
 import { 
 	IgxButtonModule,
 	IgxIconModule,

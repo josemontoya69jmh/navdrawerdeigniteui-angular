@@ -1,4 +1,8 @@
-<div class="main" igxLayout>
+<!-- <div class="main" igxLayout> -->
+<div   igxLayout>
+  <!-- aqui empieza la etuiqueta de igx-nav.-drawer -->
+  <!-- isOpen nos controla como queremos que nos aparezca al principio
+  pin      -->
   <igx-nav-drawer id="navigation" [isOpen]="drawerState.open" [(pin)]="drawerState.pin">
     <ng-template igxDrawer>
       <nav>
@@ -19,10 +23,13 @@
       </nav>
       </ng-template>
   </igx-nav-drawer>
+<!-- aqui termina la etiqueta -->
 
+<!-- Dentro de la etiqueta main pondremos nuestr <route-outlet> -->
   <main igxFlex [class.mini-padding]="!drawerState.pin && drawerState.miniTemplate">
+
     <span igxButton="icon" igxToggleAction="navigation">
-      <igx-icon fontSet="material">menu</igx-icon>
+      <igx-icon fontSet="material">home</igx-icon>
     </span>
 
     <h2>

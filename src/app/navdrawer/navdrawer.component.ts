@@ -10,24 +10,24 @@ import { IgxNavigationDrawerComponent } from "igniteui-angular";
 export class NavdrawerComponent  {
 // Comprobar esta variable
   public navItems = [
-    { name: "account_circle", text: "Avatar" },
-    { name: "error", text: "Badge" },
+    { name: "favorite", text: "Avatar" },
+    { name: "list", text: "Badge" },
     { name: "group_work", text: "Button Group" },
     { name: "home", text: "Card" },
     { name: "view_carousel", text: "Carousel" },
     { name: "date_range", text: "Date picker" },
     { name: "all_out", text: "Dialog" },
-    { name: "web", text: "Forms" },
-    { name: "android", text: "Icon" },
-    { name: "list", text: "List" },
-    { name: "arrow_back", text: "Navbar" },
-    { name: "menu", text: "Navdrawer" },
-    { name: "poll", text: "Progress Indicators" },
-    { name: "linear_scale", text: "Slider" },
-    { name: "swap_vert", text: "Scroll" },
-    { name: "feedback", text: "Snackbar" },
-    { name: "tab", text: "Tabbar" },
-    { name: "android", text: "Toast" }
+    { name: "web", text: "Forms" }
+   // { name: "delete", text: "Borrar" },
+  //  { name: "list", text: "List" },
+   // { name: "arrow_back", text: "Navbar" },
+    //{ name: "menu", text: "Navdrawer" },
+    //{ name: "poll", text: "Progress Indicators" },
+   // { name: "linear_scale", text: "Slider" },
+   // { name: "swap_vert", text: "Scroll" },
+   // { name: "feedback", text: "Snackbar" },
+   // { name: "tab", text: "Tabbar" },
+    //{ name: "android", text: "Toast" }
   ];
   public selected = "Avatar";
 
@@ -35,8 +35,11 @@ export class NavdrawerComponent  {
   public drawer: IgxNavigationDrawerComponent;
 
   public drawerState = {
+    
     miniTemplate: false,
-    open: true,
+    // aqui controlamos junto con [isOpen]en el html si aparece abierto o cerrado al iicio
+    open: false,
+    // 
     pin: true
   };
 
