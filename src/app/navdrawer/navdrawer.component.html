@@ -1,41 +1,40 @@
-<!-- <div class="main" igxLayout> -->
-<div   igxLayout>
-  <!-- aqui empieza la etuiqueta de igx-nav.-drawer -->
-  <!-- isOpen nos controla como queremos que nos aparezca al principio
-  pin      -->
-  <igx-nav-drawer id="navigation" [isOpen]="false" [pin]="true" [position]="'right'">
+<div class="content-wrap">
+	<!-- aqui empieza la etuiqueta de igx-nav.-drawer -->
+	<!-- isOpen nos controla como queremos que nos aparezca al principio
+  position  nos abre a la derecha o a la izquierda 
+  pin nos hace ver el efecto de arrastre
+  pinThreshold   tiene que estar para que funcione el pin
+  width   ancho del cajon abierto   el id es para el igxToggleAction de abajo-->
+	<igx-nav-drawer id="navegacion" [isOpen]="false" [position]="'left'" [width]="'200px'" [pin]="false"
+		[pinThreshold]="0">
 
-    <!-- En esta template tenemos los iconos -->
-    <ng-template igxDrawer>
-      <nav>
-        <span igxDrawerItem [isHeader]="true">Components</span>
+		<!-- En esta template tenemos los iconos -->
+		<ng-template igxDrawer>
+			<nav>
+				<!-- <span igxDrawerItem [isHeader]="false">Components</span> -->
 
-        <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
-          <!-- <igx-icon fontSet="material">{{ item.name }}</igx-icon> -->
+				<span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
+          <igx-icon fontSet="material">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
-        </span>
-    </nav>
-    </ng-template>
-<!-- y en esta no se lo que pasa -->
-   
-  </igx-nav-drawer>
-<!-- aqui termina la etiqueta -->
+				</span>
+			</nav>
+		</ng-template>
 
-<!-- Dentro de la etiqueta main pondremos nuestr <route-outlet> -->
-  <main igxFlex >
 
-<!-- En este span esta el boton que hace la accion -->
-    <span  igxToggleAction="navigation">
-      <igx-icon igxButton="icon" fontSet="material">home</igx-icon>
-      
+	</igx-nav-drawer>
+	<!-- aqui termina la etiqueta -->
+
+	<!-- Dentro de la etiqueta main pondremos nuestr <route-outlet> -->
+	<main igxFlex>
+
+		<!-- En este span esta el boton que hace la accion -->
+		<span  igxToggleAction="navegacion">
+      <igx-icon igxButton="icon" fontSet="material">home</igx-icon> 
     </span>
 
-    
-    <h2>
+		<h2>
+			Seleccion: <span class="setting-title">{{ selected }}</span>
+		</h2>
 
-
-
-      Seleccion: <span class="setting-title">{{ selected }}</span>
-    </h2>
-  </main>
+	</main>
 </div>
