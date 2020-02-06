@@ -8,7 +8,7 @@ import { IgxNavigationDrawerComponent } from "igniteui-angular";
   templateUrl: "./navdrawer.component.html"
 })
 export class NavdrawerComponent  {
-
+// Comprobar esta variable
   public navItems = [
     { name: "account_circle", text: "Avatar" },
     { name: "error", text: "Badge" },
