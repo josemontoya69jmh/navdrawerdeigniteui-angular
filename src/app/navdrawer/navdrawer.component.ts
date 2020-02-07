@@ -30,7 +30,27 @@ export class NavdrawerComponent {
     //{ name: "android", text: "Toast" }
   ];
 
-  public selected = "";
+  public navItemsDerecha = [
+  
+    { name: "delete", text: "Borrar" },
+      { name: "list", text: "List" },
+     { name: "arrow_back", text: "Navbar" },
+    { name: "menu", text: "Navdrawer" },
+    { name: "poll", text: "Progress Indicators" },
+    { name: "linear_scale", text: "Slider" },
+    { name: "swap_vert", text: "Scroll" },
+     { name: "feedback", text: "Snackbar" },
+     { name: "tab", text: "Tabbar" },
+    { name: "android", text: "Toast" }
+  ];
+
+
+
+
+
+
+
+  public selected = "Borrar";
 public esAdmitido = true;
   @ViewChild(IgxNavigationDrawerComponent, { static: true })
   // La instancia drawer nos devuelve todo lo que podemos hacer con
@@ -46,6 +66,8 @@ public esAdmitido = true;
     //  this.drawer.position= 'right';
 
     this.drawer.close();
+    console.log(item.text);
+
     // console.log("drawer instancia", this.drawer.isOpen);
   }
 }

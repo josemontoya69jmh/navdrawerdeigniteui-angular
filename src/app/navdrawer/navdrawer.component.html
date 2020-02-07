@@ -8,34 +8,54 @@
 	<igx-nav-drawer id="navegacion" [isOpen]="false" [position]="'left'" [width]="'200px'" [pin]="true"
 		[pinThreshold]="0">
 
-		<!-- En esta template tenemos los iconos -->
+		<!-- En esta template tenemos los iconos debe ir igxDrawer -->
 		<ng-template igxDrawer>
 			<nav>
-				<!-- <span igxDrawerItem [isHeader]="false">Components</span> -->
+
 
 				<span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)" >
           <igx-icon fontSet="material"  *ngIf= "esAdmitido">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
 				</span>
 
-        
+
 			</nav>
 		</ng-template>
-
+		<!-- aqui termina la etiqueta template que nos pinta los iconos y el texto -->
 
 	</igx-nav-drawer>
 	<!-- aqui termina la etiqueta -->
 
+
+
+
+
 	<!-- Dentro de la etiqueta main pondremos nuestr <route-outlet> -->
 	<main igxFlex>
-
-		<!-- En este span esta el boton que hace la accion -->
-		<span  igxToggleAction="navegacion">
-      <igx-icon igxButton="icon" fontSet="material">home</igx-icon> 
+		<igx-navbar>
+      <div>
+			<span id="izquierda" igxToggleAction="navegacion"  style="color:red"  >
+      <igx-icon  fontSet="material">home</igx-icon> 
     </span>
 
+
+</div>
+
+			<span><igx-icon>search</igx-icon></span>
+			<span> <igx-icon>favorite</igx-icon></span>
+			<span> <igx-icon>more_vert</igx-icon></span>
+		</igx-navbar>
+
+
+		<!-- En este span esta el boton que hace la accion -->
+
+
+
+
+
+
 		<h2>
-			Seleccion: <span class="setting-title">{{ selected }}</span>
+			Seleccion: <span>{{selected}}</span>
 		</h2>
 
 	</main>

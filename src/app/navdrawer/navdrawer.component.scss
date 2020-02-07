@@ -23,6 +23,13 @@ $secondary-color: #f96a88; /* Watermelon pink */
     overflow: hidden;
 }
 
-main {
-    padding: 1rem 2rem;
+.igx-navbar {
+
+    background: #945326;
+
+    }
+
+.igx-navbar__left igx-icon, .igx-navbar__right igx-icon {
+
+color: blue;
 }

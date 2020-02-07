@@ -13,7 +13,8 @@ import {
 	IgxRadioModule,
 	IgxRippleModule,
 	IgxSwitchModule,
-	IgxToggleModule
+	IgxToggleModule,
+  IgxNavbarModule
  } from "igniteui-angular";
 import { NavdrawerComponent } from "./navdrawer/navdrawer.component";
 
@@ -34,7 +35,8 @@ import { NavdrawerComponent } from "./navdrawer/navdrawer.component";
 		IgxRadioModule,
 		IgxRippleModule,
 		IgxSwitchModule,
-		IgxToggleModule
+		IgxToggleModule,
+    IgxNavbarModule
   ],
   providers: [],
   entryComponents: []
